@@ -1,17 +1,19 @@
-import mongoose from 'mongoose';
+import mongoose from "mongoose";
 
-const ConversationSchema = new mongoose.Schema({
+const ConversationSchema = new mongoose.Schema(
+  {
     members: {
-        type: Array
+      type: Array,
     },
     message: {
-        type: String
-    }},
-    {
-        timestamps: true
-    }
+      type: String,
+    },
+  },
+  {
+    timestamps: true,
+  }
 );
 
-const conversation = mongoose.model('Conversation', ConversationSchema);
+const conversation = mongoose.model("Conversation", ConversationSchema);
 
 export default conversation;
